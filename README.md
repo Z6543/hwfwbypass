@@ -1,11 +1,11 @@
 HWFWBypass
 ==========
 This program can be used to bypass/fool hardware firewalls.
-The program has to be started with administrator level privileges on a server.
+The program has to be started with administrator-level privileges on a server.
 When a client connects from the TCP source port specified in the client_sourceport parameter,
-to the TCP destination port original_dstport. the kernel driver will redirect the traffic to the new_dstport on the server. 
+to the TCP destination port original_dstport. the kernel driver redirects the traffic to the new_dstport on the server. 
 This trick is useful when the restrictive firewall is blocking bind shells,
-or thwarting log analysis, because all traffic will use legitimate service port.
+or thwarting log analysis, because all traffic uses legitimate service port.
 
 
 # Usage
@@ -17,7 +17,7 @@ hwfwbypass.exe 1337 3389 31337 disablechecksum debug
 ```
 
 ## Parameters
-disablechecksum: when this parameter is set, it will disable the calculation of the TCP or IP checksums. 
+disablechecksum: when this parameter is set, it disables the calculation of the TCP or IP checksums. 
 It is useful when the network adapter driver does the checksum calculations (offload).
 
 debug: print debug info on the screen about the original and modified traffic.
@@ -32,7 +32,7 @@ Copy the compiled windivert files (dll, sys) to the compiled hwfwbypass director
 
 error: failed to open the WinDivert device (5)
 
-solution: Start the executable with administrator level privileges. Check if the DLL and SYS file is in the same directory. 
+solution: Start the executable with administrator-level privileges. Check if the DLL and SYS file is in the same directory. 
 
 -------------------
 
